@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s linear;
+    font-family: "Montserrat", sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espaciado adecuado entre elementos */
+    padding: 10px 20px;
+    transition: all 0.5s;
+}
+.navbar-scrolled{
+    background: #00a1b9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.nav-link:hover{
+    color: #00323a !important;
+}
+
+
+.header {
+    position: relative;
+    text-align: center;
+    padding-top: 60px; /* Ajusta según la altura del navbar */
+}
+
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el elemento */
+    z-index: 2; /* Asegura que esté encima de la imagen */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white; /* Color del texto */
+    text-align: center;
+}
+.line {
+    position: absolute;
+    top: calc(50% + 40px); /* Ajusta la posición debajo del título */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    height: 4px;
+    background: #095f5f;
+    border-radius: 5px;
+}
+.header p {
+    position: absolute;
+    top: calc(50% + 60px); /* Ajusta la posición debajo del título */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white; /* Texto en blanco */
+    font-size: 18px;
+    text-align: center;
+    z-index: 2; /* Asegura que esté encima de la imagen */
+    width: 80%; /* Ajusta el ancho del texto */
+}
+
+
+.header-img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 161, 185, 0.5); 
+}
+
+.gestion {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el texto e imagen en los extremos */
+    flex-direction: row-reverse; /* Invierte el orden para que el texto quede a la derecha */
+    width: 90%;
+    margin: 30px auto;
+}
+
+.gestion p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.g-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.g-img img {
+    width: 500px;
+    height: 250px;
+    border-radius: 10px; /* Opcional para bordes redondeados */
+}
+
+
+.titulo-g {
+    font-size: 32px;
+    color: #095f5f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gestion-i p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.gestion-i img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.gestion-texto {
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción de 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pdf-viewer {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), 
+                url('../images/oficina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /* Asegura que el texto y el botón estén uno debajo del otro */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center;
+    color: #fff; /* Asegura buena visibilidad sobre la imagen */
+    margin-bottom: 50px; /* Separa la sección del footer */
+}
+
+.btn-primary {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #008b8b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #095f5f;
+}
+
+
+
+.pie-pagina {
+    background: linear-gradient(15deg, #142850, #14365f, #13476f, #125d80, #107792, #0d96a5, #09b8b4, #04ccb1);
+    text-align: center;
+    padding: 30px 0;
+    border-top-left-radius: 125px;
+}
+
+.pie-pagina h3, .redes-texto, .texto {
+    color: #FFF;
+}
+.dato-contacto {
+    text-align: justify;
+}
+.dato-contacto li {
+    display: block;
+    text-align: justify;
+    color: #ffffff; /* Texto en blanco */
+    font-size: 18px;
+    gap: 10px;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado uniforme entre iconos */
+}
+
+.iconos-redes li {
+    list-style: none;
+}
+
+.iconos-redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos-redes a i {
+    font-size: 32px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff; /* Amarillo brillante */
+}
+
+
+.iconos-redes a:hover i {
+    transform: translateY(-10px);
+    color: #6fecff;
+}
+
+.texto {
+    font-size: 18px;
+    margin-top: 15px;
+}
+.final-pagina{
+    background: 
+      linear-gradient(135deg,#0000 20.5%,#ffffff 0 29.5%,#0000 0) 0 5px,
+      linear-gradient( 45deg,#0000 8%,#ffffff 0 17%, #0000 0 58%) 10px 0,
+      linear-gradient(135deg,#0000 8%,#ffffff 0 17%, #0000 0 58%,#ffffff 0 67%,#0000 0),        
+      linear-gradient( 45deg,#0000 8%,#ffffff 0 17%, #0000 0 58%,#ffffff 0 67%,#0000 0 83%,#ffffff 0 92%,#0000 0),
+      rgba(255, 255, 255, 0);
+    background-size: 20px 20px;
+    color: transparent;
+    width: 100%;
+    height: 20px;
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+@media (max-width:768px) {
+.ul-bg{
+    text-align: center;    
+}  
+}
